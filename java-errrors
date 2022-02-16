@@ -1,0 +1,76 @@
+public class ShowErrors {
+
+	public static void main(String[] args) {
+		ShowErrors t = new ShowErrors(5);
+	}
+
+}
+
+This code is incorrect because there is no constructor available that takes an int.
+___________________________________
+public class ShowErrors {
+
+	public static void main(String[] args) {
+		ShowErrors t = new ShowErrors();
+		t.x();
+	}
+
+}
+
+This code is incorrect because there is no member method called x in the ShowErrors class.
+___________________________________
+public class A {
+	boolean x;
+	public static void main(String[] args) {
+		A a = new A();
+		System.out.println(a.x);
+	}
+}
+
+Output of code is: false
+___________________________________
+public class Test {
+	public static void main(String[] args) {
+		A a = new A();
+		a.print();
+	}
+}
+class A {
+	String s;
+	A(String newS){
+		s = newS;
+	}
+	public void print(){
+		System.out.print(s);
+	}
+}
+
+Constructor in class A required String argument but we give no argument.
+___________________________________
+public class ShowErrors {
+
+	public void method1() {
+		Circle c;
+		System.out.println("What is radius " + c.getRadius());
+		c = new Circle();
+	}
+
+}
+
+This code will cause a NullPointerException at runtime because c is used in the print statement before it is created.
+___________________________________
+public class ShowErrors {
+
+	public static void main(String[] args) {
+		C c = new C(5.0);
+		System.out.println(c.value);
+	}
+	
+}
+
+class C {
+	int value = 2;
+}
+
+This code is incorrect because the class C have no constructor that takes a double as argument.
+___________________________________
