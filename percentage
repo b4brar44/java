@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		int total_classes = 14;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Please enter your name: ");
+		String name = input.nextLine();
+		System.out.print("Please enter your Student id: ");
+		int student_id = input.nextInt();
+		System.out.print("Please enter the total classes you have attended: ");
+		float classes_attended = input.nextFloat();
+		float Attendance_percentage = classes_attended / total_classes * 100;
+		System.out.println("percentage is: " + Attendance_percentage);
+		float min =75f;
+		if(Attendance_percentage>min){
+			System.out.println( name + ", Your attendance percentage is " + Attendance_percentage + "% and you are allowed to sit in the exam." );
+		}else{
+			System.out.println( name+", Your attendance percentage is " + Attendance_percentage + "% and you are not allowed to sit in the exam." );
+		}
+	}
+}
