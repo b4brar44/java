@@ -10,12 +10,12 @@ public class Main {
 		System.out.print("Please enter the total classes you have attended: ");
 		float classes_attended = input.nextFloat();
 		float Attendance_percentage = classes_attended / total_classes * 100;
-		System.out.println("percentage is: " + Attendance_percentage);
-		float min =75f;
-		if(Attendance_percentage>min){
-			System.out.println( name + ", Your attendance percentage is " + Attendance_percentage + "% and you are allowed to sit in the exam." );
-		}else{
-			System.out.println( name+", Your attendance percentage is " + Attendance_percentage + "% and you are not allowed to sit in the exam." );
+		int percentage = (int) Attendance_percentage;
+		int min = 75;
+		if (Attendance_percentage > min) {
+			System.out.println(name + ", Your attendance percentage is " + percentage + "% and you are allowed to sit in the exam.");
+		} else {
+			System.out.println(name + ", Your attendance percentage is " + percentage + "% and you are not allowed to sit in the exam.");
 		}
 	}
 }
